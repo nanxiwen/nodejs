@@ -1,5 +1,8 @@
+//引入db
+
+const db = require('../config/db');
 //设计 schema
-const schema = new IDBCursor.Schema({
+const schema = new db.Schema({
     //用户名
     username: String,
     //密码
