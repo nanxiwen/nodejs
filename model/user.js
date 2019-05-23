@@ -4,15 +4,32 @@ const db = require('../config/db');
 //设计 schema
 const schema = new db.Schema({
     //用户名
-    username: String,
+    username: {
+        type: String,
+        required: true,  //必须
+    },
+    
     //密码
-    password: String,
+    password: {
+        type: String,
+        required: true,  //必须
+    },
     //呢称
     nickname: String,
+    //性别
+    sex: {
+        type: Number,
+        default: 1
+    },
     //用户头像
     avatar: {
         type: String,
         default: 'http://localhost:3000/images/avatar.jpg'
+    },
+    //是否是管理员
+    admin: {
+        type: Number,
+        default: 0
     }
 })
 

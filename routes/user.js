@@ -3,12 +3,15 @@ const express = require('express');
 const UserCtrl = require('../controller/userCtrl');
 const router = express.Router();
 
+
+router.post('/reg', UserCtrl.reg);
+router.post('/login', UserCtrl.login);
 //跟用户相关的请求地址 都会是 http://localhost:3000/api/user
-router.route('/user')
-    .get(UserCtrl.findUser)
-    .post(UserCtrl.addUser)
-    .delete(UserCtrl.delUser)
-    .put(UserCtrl.upUser)
+// router.route('/user')
+//     .get(UserCtrl.findUser)
+//     .post(UserCtrl.addUser)
+//     .delete(UserCtrl.delUser)
+//     .put(UserCtrl.upUser)
 
 // 获取我们的用户列表信息
 // http://localhost:3000/user/find
