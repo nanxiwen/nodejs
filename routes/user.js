@@ -1,9 +1,10 @@
 const express = require('express');
 // const UserModel = require('../model/user');
 const UserCtrl = require('../controller/userCtrl');
+//1. 创建路由容器
 const router = express.Router();
 
-
+//把路由挂到路由容器上
 router.post('/reg', UserCtrl.reg);
 router.post('/login', UserCtrl.login);
 //跟用户相关的请求地址 都会是 http://localhost:3000/api/user
@@ -133,5 +134,5 @@ router.post('/login', UserCtrl.login);
 //         })
 //     })
 // })
-
+//暴露路由容器
 module.exports = router;
